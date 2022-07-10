@@ -133,7 +133,7 @@ class ProfileMainPanel extends React.Component {
                             : !this.state.autographs.length ?
                                 isOwnProfile ?
                                     <Placeholder stretched icon={<Icon56GhostOutline width={96} height={96} fill={'var(--accent)'}/>} header={'Абсолютная пустота'}>
-                                        Пока никто не оставлил вам автограф
+                                        Пока никто не оставил вам автограф
                                     </Placeholder>
                                 :
                                     <Placeholder stretched icon={<Icon56GhostOutline width={96} height={96} fill={'var(--accent)'}/>} header={'Абсолютная пустота'} action={
