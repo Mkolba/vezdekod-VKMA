@@ -1,4 +1,4 @@
-export const url = 'https://746b-91-203-238-69.ngrok.io/';
+export const url = 'https://vezdekod.adawhite.ru/';
 
 async function apiCall(method, params) {
     params['auth'] = window.location.search;

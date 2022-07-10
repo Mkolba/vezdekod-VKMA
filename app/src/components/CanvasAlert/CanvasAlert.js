@@ -3,7 +3,7 @@ import { Paintable, PaintableRef } from 'paintablejs/react';
 import bridge from "@vkontakte/vk-bridge";
 
 import {
-    Alert, Button, Div
+    Alert, Button,
 } from '@vkontakte/vkui';
 
 import {
@@ -26,8 +26,19 @@ export default class CanvasAlert extends React.Component {
     }
 
     render() {
+
+        const colors = [
+            '#000000',
+            '#ffffff',
+            '#f50707',
+            '#45ff00',
+            '#ffd500',
+            '#12e0db',
+            '#9705f6',
+        ]
+
         return (
-            <Alert onClose={this.props.goBack} header={'Нарисуйте что-нибудь'}>
+            <Alert onClose={this.props.goBack} header={'Нарисуйте что-нибудь'} className={'CanvasAlert'}>
                 <div ref={this.contentRef}>
                     <Paintable
                         width={300}
@@ -42,9 +53,17 @@ export default class CanvasAlert extends React.Component {
                         <Button onClick={_ => this.setState({useEraser: !this.state.useEraser})} mode={this.state.useEraser ? 'secondary' : 'primary'}>
                             Ластик
                         </Button>
-                        <div className={'ColorPicker'}>
-                            <input type={'color'} onChange={e => this.setState({color: e.target.value})} value={this.state.color}/>
-                        </div>
+
+                        {
+                            colors.map(item => {
+                                return (
+                                    <div className={'Color' + (this.state.color === item ? ' Selected' : '')}
+                                         onClick={() => this.setState({color: item})}
+                                         style={{background: item}}
+                                    />
+                                )
+                            })
+                        }
                     </div>
                     <Button stretched onClick={_ => this.setState({active: false})}>
                         Сохранить

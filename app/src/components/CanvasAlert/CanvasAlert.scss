@@ -4,12 +4,28 @@ canvas {
   border-radius: 8px;
 }
 
+.CanvasAlert .vkuiAlert {
+  max-width: 350px;
+}
+
 .CanvasControls {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 4px 0;
   margin-top: 2px;
+
+  .Color {
+    border-radius: 8px;
+    height: 24px;
+    width: 24px;
+    margin-left: 4px;
+    border: 2px solid var(--separator_common);
+
+    &:is(.Selected) {
+      border: 2px solid var(--accent);
+    }
+  }
 
   input {
     overflow: hidden;
