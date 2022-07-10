@@ -1,0 +1,38 @@
+
+canvas {
+  border: 1px solid var(--separator_common);
+  border-radius: 8px;
+}
+
+.CanvasControls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4px 0;
+  margin-top: 2px;
+
+  input {
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+    height: 40px;
+    box-sizing: content-box;
+    appearance: none;
+    position: absolute;
+    width: 90px;
+  }
+
+  .ColorPicker {
+    margin-left: 4px;
+    height: 30px;
+    display: flex;
+    width: 30px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+}

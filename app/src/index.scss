@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*:not(input):not(textarea):not(.Cell__children),
+::after,
+::before, .Div {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+:root {
+  --button_destructive_background: var(--destructive);
+  --button_destructive_foreground: #fff;
+}
+
+body[scheme='bright_light'] {
+  --attach_background: rgba(0, 0, 0, 0.02);
+  --chart_tick_label: #6f96c4;
+  --chart_stroke: #e5e9ec;
+}
+
+body[scheme='space_gray'] {
+  --attach_background: rgba(255, 255, 255, 0.05);
+  --chart_tick_label: #6f96c4;
+  --chart_stroke: #3c3c3c;
+}
+
+.Tabs {
+  z-index: 2
+}
+
+.Textarea {
+  overflow: hidden;
+}
+
+.react-datepicker-popper {
+  z-index: 5;
+}
+
+.Textarea textarea::-webkit-scrollbar-thumb {
+  background: #bbbfc4a8;
+  border-radius: 4px;
+  border: 1px solid var(--thin_border);
+}
+
+.Textarea textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.Textarea textarea::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background: hsla(0,0%,50.2%,.1);
+}
+
+.vkuiActionSheetItem__subtitle {
+  white-space: normal;
+}
+
+.BaseNode .vkuiSelect__title {
+  height: 44px;
+}
+
+.Chart__Tooltip {
+  background-color: red;
+}
+
+.Cell__dragger, .CellButton__content, .Link, .Slider__thumb, .Switch:not([disabled]) .vkuiSwitch__pseudo, .TabbarItem, button:not([disabled]), select:not([disabled]) {
+  cursor: pointer;
+}
+
+.Switch__self[disabled]+.Switch__pseudo, .TabbarItem--selected {
+  cursor: default;
+}
+
+.vkuiAvatar__in img {
+  pointer-events: none;
+}
+
+.vkuiSnackbar__content {
+  max-width: calc(100% - 24px);
+}
+
+.vkuiSnackbar__content-text {
+  max-width: 100%;
+}
+
+.AlertInput .FormItem {
+  padding: 6px 0;
+}
+
+iframe {
+  display: none;
+}

@@ -1,0 +1,45 @@
+.ImageField {
+  border-radius: 8px;
+  width: calc(100vw - 72px);
+  max-width: 360px;
+  max-height: 200px;
+
+  &:is(.empty) {
+    height: 200px;
+    border: 2px dashed var(--accent);
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+  }
+
+  .Wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--accent);
+
+    .Text {
+      font-size: 14px;
+      padding: 0 16px;
+    }
+
+    .Icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 12px;
+
+      .Tappable {
+        border-radius: 8px;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
